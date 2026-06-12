@@ -1,0 +1,30 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="1024" rx="140" fill="#121212"/>
+  <circle cx="760" cy="238" r="188" fill="url(#paint0_radial)" fill-opacity="0.95"/>
+  <circle cx="216" cy="792" r="160" fill="url(#paint1_radial)" fill-opacity="0.8"/>
+  <rect x="112" y="112" width="800" height="800" rx="96" fill="url(#paint2_linear)" fill-opacity="0.12" stroke="rgba(255,255,255,0.18)"/>
+  <path d="M510 295C603.336 295 679 370.664 679 464C679 557.336 603.336 633 510 633C416.664 633 341 557.336 341 464C341 370.664 416.664 295 510 295Z" fill="#F0EAFD"/>
+  <path d="M349 813C368.715 702.177 449.517 651 510 651C570.483 651 651.285 702.177 671 813H349Z" fill="#E7DBFF"/>
+  <path d="M424 402C454.217 402 478.8 377.417 478.8 347.2V334H542.2V347.2C542.2 377.417 566.783 402 597 402H610V437C610 507.14 553.14 564 483 564H451C380.86 564 324 507.14 324 437V402H424Z" fill="#121212"/>
+  <circle cx="438" cy="456" r="13" fill="#121212"/>
+  <circle cx="582" cy="456" r="13" fill="#121212"/>
+  <path d="M440 519C463.5 537.5 557.5 537.5 581 519" stroke="#121212" stroke-width="18" stroke-linecap="round"/>
+  <path d="M357 355C385.5 312.5 442.5 289 505 289C564 289 619.5 309 652 355L648 288C610 242 559.5 216 505 216C447.5 216 398 240.5 361 288L357 355Z" fill="#121212"/>
+  <path d="M661 813H363L349 847H675L661 813Z" fill="#9D7DF7"/>
+  <text x="512" y="897" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">ANDRÉ RUBIM</text>
+  <text x="512" y="941" text-anchor="middle" fill="#C9BAF9" font-family="Inter, Arial, sans-serif" font-size="28">Consultor Comercial Flypay</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 238) rotate(90) scale(188)">
+      <stop stop-color="#9D7DF7"/>
+      <stop offset="1" stop-color="#9D7DF7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(216 792) rotate(90) scale(160)">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paint2_linear" x1="152" y1="112" x2="912" y2="912" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#9D7DF7"/>
+    </linearGradient>
+  </defs>
+</svg>

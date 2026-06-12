@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>André Rubim | Consultor Comercial Flypay</title>
+  <meta name="description" content="Cartão digital interativo de André Rubim, Consultor Comercial Flypay. Fale no WhatsApp, salve o contato, conheça os serviços e compartilhe com 1 clique.">
+  <meta name="theme-color" content="#9D7DF7">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="André Rubim | Consultor Comercial Flypay">
+  <meta property="og:description" content="Soluções de pagamento para fazer seu negócio crescer.">
+  <meta property="og:image" content="https://contatocomercial.andrerubim.com.br/assets/andre-rubim-foto.jpeg">
+  <meta property="og:url" content="https://contatocomercial.andrerubim.com.br">
+  <meta property="og:site_name" content="Flypay">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="André Rubim | Consultor Comercial Flypay">
+  <meta name="twitter:description" content="Soluções de pagamento para fazer seu negócio crescer.">
+  <meta name="twitter:image" content="https://contatocomercial.andrerubim.com.br/assets/andre-rubim-foto.jpeg">
+  <link rel="canonical" href="https://contatocomercial.andrerubim.com.br">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" href="assets/andre-rubim-foto.jpeg" as="image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero-card" id="topo">
+      <div class="hero-topbar">
+        <button class="ghost-button compact" id="themeToggle" type="button" aria-label="Alternar tema">
+          <span class="icon">◐</span>
+          <span>Tema</span>
+        </button>
+        <button class="ghost-button compact" id="openAdmin" type="button" aria-label="Abrir painel administrativo">
+          <span class="icon">⚙</span>
+          <span>Editar</span>
+        </button>
+      </div>
+
+      <div class="hero-brand">
+        <img id="logoImage" class="brand-logo" src="assets/flypay-logo.svg" alt="Logo Flypay">
+        <span class="brand-text">Flypay</span>
+      </div>
+
+      <div class="hero-profile">
+        <img id="profileImage" class="profile-image" src="assets/andre-rubim-foto.jpeg" alt="Foto de André Rubim">
+        <div class="badge">Consultoria comercial premium</div>
+      </div>
+
+      <div class="hero-copy">
+        <h1 id="displayName">ANDRÉ RUBIM</h1>
+        <p id="displayRole" class="role">Consultor Comercial Flypay</p>
+        <p id="displaySlogan" class="slogan">Soluções de pagamento para fazer seu negócio crescer.</p>
+      </div>
+
+      <div class="hero-actions">
+        <a id="primaryWhatsapp" class="primary-cta" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+          <span class="icon">💬</span>
+          <span>Falar no WhatsApp</span>
+        </a>
+
+        <div class="quick-actions">
+          <button id="saveContactButton" class="action-card" type="button">
+            <span class="icon">👤</span>
+            <strong>Salvar contato</strong>
+            <small>Baixar `.vcf` compatível com Android e iPhone</small>
+          </button>
+
+          <a id="callButton" class="action-card" href="#">
+            <span class="icon">📞</span>
+            <strong>Ligar agora</strong>
+            <small>Abre o discador com um toque</small>
+          </a>
+
+          <a id="emailButton" class="action-card" href="#">
+            <span class="icon">✉️</span>
+            <strong>Enviar e-mail</strong>
+            <small>Contato comercial direto</small>
+          </a>
+
+          <a id="siteButton" class="action-card" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="icon">🌐</span>
+            <strong>Site Flypay</strong>
+            <small>Conheça mais sobre a empresa</small>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Redes sociais</h2>
+          <p>Conecte-se em mais canais.</p>
+        </div>
+        <div class="social-grid" id="socialLinks"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Serviços Flypay</h2>
+          <p>Soluções comerciais editáveis pelo painel.</p>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+      </section>
+
+      <section class="panel panel-split">
+        <div>
+          <div class="section-heading">
+            <h2>QR Code do cartão</h2>
+            <p>Escaneie, baixe, compartilhe ou imprima.</p>
+          </div>
+          <div class="qr-box">
+            <canvas id="qrCanvas" width="280" height="280" aria-label="QR Code do cartão"></canvas>
+            <div class="qr-actions">
+              <button id="downloadQrButton" class="secondary-button" type="button">Baixar PNG</button>
+              <button id="shareQrButton" class="secondary-button" type="button">Compartilhar QR</button>
+              <button id="printQrButton" class="secondary-button" type="button">Imprimir QR</button>
+            </div>
+          </div>
+        </div>
+        <div class="info-stack">
+          <div class="info-card">
+            <h3>NFC pronto</h3>
+            <p>Aproxime o celular do cartão NFC para abrir a URL do cartão digital.</p>
+            <div class="copy-box">
+              <span id="nfcLinkOutput"></span>
+              <button id="copyNfcLink" class="ghost-button" type="button">Copiar link</button>
+            </div>
+          </div>
+          <div class="info-card">
+            <h3>Compartilhar cartão</h3>
+            <p>Use o compartilhamento nativo do celular ou envie por canal específico.</p>
+            <div class="share-actions">
+              <button id="nativeShareButton" class="secondary-button" type="button">Compartilhar</button>
+              <div class="platform-grid" id="platformShareLinks"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-split">
+        <div>
+          <div class="section-heading">
+            <h2>Localização</h2>
+            <p>Atendimento com presença comercial e suporte consultivo.</p>
+          </div>
+          <div class="map-frame">
+            <iframe
+              id="mapFrame"
+              title="Mapa Google Maps"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Flypay%20Brasil&output=embed"></iframe>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">
+            <h2>Depoimentos</h2>
+            <p>Prova social para aumentar conversão.</p>
+          </div>
+          <div id="testimonialsGrid" class="testimonials-grid"></div>
+        </div>
+      </section>
+
+      <section class="panel panel-split">
+        <div>
+          <div class="section-heading">
+            <h2>Catálogo PDF</h2>
+            <p>Baixe um material comercial pronto para apresentar serviços.</p>
+          </div>
+          <a id="catalogButton" class="secondary-button wide" href="assets/catalogo-flypay.pdf" download>Baixar catálogo PDF</a>
+        </div>
+        <div>
+          <div class="section-heading">
+            <h2>Estatísticas</h2>
+            <p>Medição local de visitas e cliques, com campos para Analytics e Meta Pixel.</p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card"><strong id="visitCount">0</strong><span>Visitas</span></div>
+            <div class="stat-card"><strong id="whatsappCount">0</strong><span>Cliques WhatsApp</span></div>
+            <div class="stat-card"><strong id="shareCount">0</strong><span>Compartilhamentos</span></div>
+            <div class="stat-card"><strong id="vcfCount">0</strong><span>Downloads VCF</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footerText">Flypay • Soluções de pagamento com atendimento consultivo.</p>
+      <a href="#topo" class="ghost-button compact">Voltar ao topo</a>
+    </footer>
+  </div>
+
+  <a id="floatingWhatsapp" class="floating-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <span>💬</span>
+    <span>WhatsApp</span>
+  </a>
+
+  <aside id="adminPanel" class="admin-panel" aria-hidden="true">
+    <div class="admin-header">
+      <div>
+        <h2>Painel administrativo</h2>
+        <p>Edite tudo sem programar. As alterações ficam salvas no navegador.</p>
+      </div>
+      <button id="closeAdmin" class="ghost-button compact" type="button">Fechar</button>
+    </div>
+
+    <div class="admin-body">
+      <section class="admin-section">
+        <h3>Informações principais</h3>
+        <div class="form-grid">
+          <label>Nome<input id="adminName" type="text"></label>
+          <label>Cargo<input id="adminRole" type="text"></label>
+          <label>Slogan<input id="adminSlogan" type="text"></label>
+          <label>Telefone<input id="adminPhone" type="text"></label>
+          <label>WhatsApp<input id="adminWhatsapp" type="text"></label>
+          <label>E-mail<input id="adminEmail" type="email"></label>
+          <label>Site<input id="adminSite" type="url"></label>
+          <label>Instagram<input id="adminInstagram" type="url"></label>
+          <label>Facebook<input id="adminFacebook" type="url"></label>
+          <label>LinkedIn<input id="adminLinkedin" type="url"></label>
+          <label>YouTube<input id="adminYoutube" type="url"></label>
+          <label>Mapa Google<input id="adminMap" type="url"></label>
+          <label>Foto / Avatar<input id="adminPhoto" type="url"></label>
+          <label>Logo<input id="adminLogo" type="url"></label>
+          <label>Link do cartão<input id="adminCardUrl" type="url"></label>
+          <label>Link para gravação NFC<input id="adminNfcLink" type="url"></label>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h3>Serviços</h3>
+        <div class="form-grid">
+          <label>Maquininhas<input id="service1Title" type="text"></label>
+          <label>Texto<input id="service1Text" type="text"></label>
+          <label>Pix<input id="service2Title" type="text"></label>
+          <label>Texto<input id="service2Text" type="text"></label>
+          <label>Link de Pagamento<input id="service3Title" type="text"></label>
+          <label>Texto<input id="service3Text" type="text"></label>
+          <label>Gestão Financeira<input id="service4Title" type="text"></label>
+          <label>Texto<input id="service4Text" type="text"></label>
+          <label>Antecipação de Recebíveis<input id="service5Title" type="text"></label>
+          <label>Texto<input id="service5Text" type="text"></label>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h3>SEO e rastreamento</h3>
+        <div class="form-grid">
+          <label>Meta Title<input id="adminMetaTitle" type="text"></label>
+          <label>Meta Description<input id="adminMetaDescription" type="text"></label>
+          <label>Miniatura / OG Image<input id="adminOgImage" type="url"></label>
+          <label>Google Analytics ID<input id="adminGaId" type="text" placeholder="G-XXXXXXXXXX"></label>
+          <label>Meta Pixel ID<input id="adminMetaPixel" type="text" placeholder="1234567890"></label>
+          <label>PDF do catálogo<input id="adminCatalog" type="url"></label>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h3>Cores</h3>
+        <div class="form-grid">
+          <label>Primária<input id="adminPrimaryColor" type="color"></label>
+          <label>Escura<input id="adminDarkColor" type="color"></label>
+          <label>Clara<input id="adminLightColor" type="color"></label>
+        </div>
+      </section>
+
+      <section class="admin-section admin-actions">
+        <button id="saveConfigButton" class="secondary-button" type="button">Salvar alterações</button>
+        <button id="resetConfigButton" class="ghost-button" type="button">Restaurar padrão</button>
+        <button id="exportConfigButton" class="ghost-button" type="button">Exportar JSON</button>
+        <label class="ghost-button file-label">Importar JSON<input id="importConfigInput" type="file" accept="application/json"></label>
+      </section>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Cartão Flypay — André Rubim",
+  "short_name": "Cartão Flypay",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#9D7DF7",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
